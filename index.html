@@ -139,9 +139,9 @@
         const buildUrl = "Build";
         const loaderUrl = buildUrl + "/Build.loader.js";
         const config = {
-            dataUrl: buildUrl + "/Build.data.gz",
-            frameworkUrl: buildUrl + "/Build.framework.js.gz",
-            codeUrl: buildUrl + "/Build.wasm.gz",
+            dataUrl: buildUrl + "/0cb6b89f8cb42b0b08969bfa7dc71ddf.data.br",
+            frameworkUrl: buildUrl + "/2e4806a5a5fa3f1c5f69e089e8bd7c9d.js.br",
+            codeUrl: buildUrl + "/78f319b61f3dd7c24565cc987fececc5.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "WebXR",
@@ -150,8 +150,8 @@
             cacheControl: function (url) {
             // typically includes: .data, .bundle, .zpt
             if (url.match(/\.data/) || url.match(/\.bundle/) || url.match(/\.zpt/)) {
-             return "must-revalidate";
-            }
+             return "immutable";
+}
    
             if (url.match(/\.mp4/) || url.match(/\.custom/) || url.match(/\.zbin/)) {
                 return "immutable";
